@@ -8,6 +8,7 @@ url: "http://pfactor.io/" # the base hostname & protocol for your site
 #url: "http://localhost:4000/"
 twitter_username: jekyllrb
 github_username:  jekyll
+facebook_page: pfactorio/1427400607569811
 
 # Build settings
 markdown: kramdown
