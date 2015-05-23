@@ -32,7 +32,23 @@
                     </li>
                     {% endif %} 
                     {% endfor %}
+                {% if site.facebook_page %}
+                  <li>
+                  <a href="{{ site.facebook_page }}"><i class="fa fa fa-facebook-square fa-lg"></i></a>
+                  </li>
+                {% endif %}
+                {% if site.twitter_username %}
+                  <li>
+                  <a href="http://twitter.com/{{ site.twitter_username }}/"><i class="fa fa fa-twitter-square fa-lg"></i></a>
+                  </li>
+                {% endif %}                
+                {% if site.github_username %}
+                  <li>
+                  <a href="http://github.com/{{ site.github_username }}/"><i class="fa fa fa-github-square fa-lg"></i></a>
+                  </li>
+                {% endif %}
                 </ul>
+
             </div>
             <!-- /.navbar-collapse -->
         </div>

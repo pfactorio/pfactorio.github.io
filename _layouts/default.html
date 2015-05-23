@@ -23,7 +23,18 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
+      
+    <!-- Open external links in new tab -->
+    <script>
+      $('a[href^=http]').click(function () {
+      var a = new RegExp('/' + window.location.host + '/');
+      if (!a.test(this.href)) {
+        window.open(this.href);
+        return false;
+       }
+      });
+    </script>
+    
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 

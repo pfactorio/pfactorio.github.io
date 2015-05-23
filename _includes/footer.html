@@ -6,8 +6,17 @@
       Copyright &copy; {{ site.title }} 2015
     </div>
     <div class="col-lg-6">
+      <span class="pull-right">
       {% if site.facebook_page %}
-        <i class="fa fa-facebook-official"></i>
+        <a href="{{ site.facebook_page }}"><i class="fa fa fa-facebook-square fa-2x"></i></a></i>
       {% endif %}
+      {% if site.twitter_username %}
+        <a href="http://twitter.com/{{ site.twitter_username }}/"><i class="fa fa fa-twitter-square fa-2x"></i></a> 
+      {% endif %}
+      {% if site.github_username %}
+        <a href="http://github.com/{{ site.github_username }}/"><i class="fa fa fa-github-square fa-2x"></i></a>
+      {% endif %}   
+      </span>
     </div>
+  </div>  
 </footer>

@@ -6,9 +6,12 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://pfactor.io/" # the base hostname & protocol for your site
 #url: "http://localhost:4000/"
-twitter_username: jekyllrb
-github_username:  jekyll
-facebook_page: pfactorio/1427400607569811
+twitter_username: pfactorio
+github_username:  pfactorio
+facebook_page: https://facebook.com/pages/pfactorio/1427400607569811
+disqus_shortname: pfactorio
+sass:
+  style: compressed
 
 # Build settings
 markdown: kramdown
