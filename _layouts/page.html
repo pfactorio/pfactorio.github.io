@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+
+{% if page.breadcrumbs != false %}
+{% include breadcrumb.html %}
+{% endif %}
+
 <div class="post">
 
   <header class="post-header">
