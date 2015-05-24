@@ -1,18 +1,14 @@
 - title:        "About"
-  url:          /about.html
+  url:          /about/
   
-- title:        "Services"
-  url:          /services.html
+- title:        "Aviation"
+  url:          /aviation/
   
-- title:        "Contact"
-  url:          /contact.html
-  
-- title:        "Portfolio"
+- title:        "Electronics"
   dropdown:
-    - title:    "Dropdown 1"
-      url:      "/portfolio-1"
+    - title:    "Home"
+      url:      "/electronics/"
+    - title:    "Tutorials"
+      url:      "/electronics/tutorials/"
     - title:    "Dropdown 2"
       url:      "/portfolio-2"
-  
-- title:        "Test"
-  url:          /test.html	

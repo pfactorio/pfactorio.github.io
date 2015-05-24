@@ -1,0 +1,23 @@
+<ul class="breadcrumb">
+  {% assign aPath = (page.url | strip | split: '/') %}
+  {% assign pathSize = aPath.size | minus: 2 %}
+  <li>
+    <a href="/">Home</a>
+    <span class="divider"></span>
+  </li>
+  {% if pathSize == -1 %}
+  <li class="active">{{ page.title }}</li>
+  {% else %}
+  {% for i in (1..pathSize) %}
+  {% assign subPath = '/' %}
+   <li>
+    {% for j in (1..i) %}
+    {% assign subPath = (subPath | append: aPath[j] | append: '/') %}
+    {% endfor %}
+    <a href="{{ subPath }}">{{ aPath[i] | capitalize }}</a>
+  <span class="divider"></span>
+  </li>
+  {% endfor %}
+  <li class="active">{{ page.title }}</li>
+  {% endif %}
+</ul>
