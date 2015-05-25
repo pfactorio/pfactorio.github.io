@@ -1,7 +1,7 @@
 ---
 layout: landing
 breadcrumbs: true
-categories: electronics
+categories: iot
 ---
 
 ## This is a test ##

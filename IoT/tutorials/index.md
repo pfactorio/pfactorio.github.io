@@ -1,7 +1,7 @@
 ---
 layout: landing
 breadcrumbs: true
-categories: electronics tutorials
+categories: iot tutorials
 ---
 
 ## This is a test ##

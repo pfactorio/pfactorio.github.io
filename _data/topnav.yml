@@ -4,11 +4,11 @@
 - title:        "Aviation"
   url:          /aviation/
   
-- title:        "Electronics"
+- title:        "IoT"
   dropdown:
     - title:    "Home"
-      url:      "/electronics/"
+      url:      "/IoT/"
     - title:    "Tutorials"
-      url:      "/electronics/tutorials/"
+      url:      "/IoT/tutorials/"
     - title:    "Dropdown 2"
       url:      "/portfolio-2"
