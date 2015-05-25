@@ -7,8 +7,6 @@
 - title:        "IoT"
   dropdown:
     - title:    "Home"
-      url:      "/IoT/"
+      url:      "/iot/"
     - title:    "Tutorials"
-      url:      "/IoT/tutorials/"
-    - title:    "Dropdown 2"
-      url:      "/portfolio-2"
+      url:      "/iot/tutorials/"
