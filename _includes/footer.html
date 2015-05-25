@@ -8,13 +8,31 @@
     <div class="col-lg-6">
       <span class="pull-right">
       {% if site.facebook_page %}
-        <a href="{{ site.facebook_page }}"><i class="fa fa fa-facebook-square fa-2x"></i></a></i>
+      <p>{{ 'http://www.facebook.com/sharer/sharer.php' | uri_escape | append: ' ' }}</p>
+      <p>{{ 'http://www.facebook.com/sharer/sharer.php' | url_param_escape | append: ' ' }}</p>
+      <p>{{ 'http://www.facebook.com/sharer/sharer.php' | url_escape | append: ' ' }}</p>
+      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php">
+          <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
       {% endif %}
       {% if site.twitter_username %}
-        <a href="http://twitter.com/{{ site.twitter_username }}/"><i class="fa fa fa-twitter-square fa-2x"></i></a> 
+        <a href="http://twitter.com/{{ site.twitter_username }}/">
+          <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a> 
       {% endif %}
       {% if site.github_username %}
-        <a href="http://github.com/{{ site.github_username }}/"><i class="fa fa fa-github-square fa-2x"></i></a>
+        <a href="http://github.com/{{ site.github_username }}/">
+          <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
       {% endif %}   
       </span>
     </div>
