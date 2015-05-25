@@ -8,11 +8,12 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   
   <!-- Open Graph Meta Tags -->
-  <meta name="og:url" content="{{ page.url | remove_first: '/' | prepend: site.url }}" />
-  <meta name="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="og:description" content="{{ page.content | truncate: 160 }}" />
-  <meta name="og:site_name" content="PFactor.io" />
-  <meta name="og:type" content="article" />
+  
+  <meta name="og:url" content="{{ page.url | remove_first: '/' | prepend: site.url }}"></meta>
+  <meta name="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"></meta>
+  <meta name="og:description" content="{{ page.content | truncate: 160 }}"></meta>
+  <meta name="og:site_name" content="PFactor"></meta>
+  <meta name="og:type" content="article"></meta>
   <!-- End Open Graph Meta Tags -->
 
     <!-- Bootstrap Core CSS -->
