@@ -35,7 +35,7 @@
     </div>
   </div>  
   
-  {% if page.comments and page.comments == true and site.disqus_shortname %}
+  {% if page.comments != false and site.disqus_shortname %}
   
 <div id="disqus_thread"></div>
 <script type="text/javascript">
