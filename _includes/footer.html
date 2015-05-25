@@ -8,10 +8,7 @@
     <div class="col-lg-6">
       <span class="pull-right">
       {% if site.facebook_page %}
-      <p>{{ 'http://www.facebook.com/sharer/sharer.php' | uri_escape | append: ' ' }}</p>
-      <p>{{ 'http://www.facebook.com/sharer/sharer.php' | url_param_escape | append: ' ' }}</p>
-      <p>{{ 'http://www.facebook.com/sharer/sharer.php' | url_escape | append: ' ' }}</p>
-      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php">
+      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u={{ page.url | remove_first: '/' | prepend: site.url | replace: ':', '%3A' | replace: '/', '%2F' | replace: ' ', '%20' }}&display=popup">
           <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
