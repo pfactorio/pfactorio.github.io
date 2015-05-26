@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="pfactor.io provides tutorials, blog posts and resources for electronics and aviation enthusiasts.
+" />
+    <meta name="author" content="" />
+
+  <title>Lesson 3: Multi-digit 7-segment LEDs</title>
+  
+  <!-- Open Graph Meta Tags -->
+  
+  <meta property="og:url" content="http://pfactor.io/iot/tutorials/lesson_03/" />
+  <meta property="og:title" content="Lesson 3: Multi-digit 7-segment LEDs" />
+  <meta property="og:description" content="Multi-digit 7-segment displays typically have two or more digits, each of which consists of a 7-segment display by itself. The common lines of each individua..." />
+  <meta property="og:site_name" content="PFactor" />
+  <meta property="og:type" content="article" />
+  <!-- End Open Graph Meta Tags -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="/css/modern-business.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+<!--    
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" /></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" /></script>
+    <![endif]-->
+
+  <link rel="canonical" href="http://pfactor.io/iot/tutorials/lesson_03/" />
+  <link rel="alternate" type="application/rss+xml" title="PFactor.io" href="http://pfactor.io///feed.xml" />
+  <script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+	});
+	MathJax.Hub.Config({
+		"HTML-CSS": { preferredFont: "STIX" }
+	});
+  </script>
+   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  
+</head>
+
+
+  <body>
+
+        <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">PFactor.io</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                     
+                    
+                    
+                    <li>
+                        <a href="/aviation/">Aviation</a>
+                    </li>
+                     
+                    
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IoT <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                               
+                            <li>
+                                <a href="/iot/">Home</a>
+                            </li>
+                                
+                            <li>
+                                <a href="/iot/tutorials/">Tutorials</a>
+                            </li>
+                      
+                        </ul> <!-- /.dropdown-menu -->
+                    </li> <!-- /.dropdown -->
+                     
+                    
+                
+                  <li>
+                  <a href="https://facebook.com/pages/pfactorio/1427400607569811"><i class="fa fa fa-facebook-square fa-lg"></i></a>
+                  </li>
+                
+                
+                  <li>
+                  <a href="http://twitter.com/pfactorio/"><i class="fa fa fa-twitter-square fa-lg"></i></a>
+                  </li>
+                                
+                
+                  <li>
+                  <a href="http://github.com/pfactorio/"><i class="fa fa fa-github-square fa-lg"></i></a>
+                  </li>
+                
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+      
+<ul class="breadcrumb">
+  
+  
+  <li>
+    <a href="/">Home</a>
+    <span class="divider"></span>
+  </li>
+  
+  
+  
+   <li>
+    
+    
+    
+    <a href="/iot/">Iot</a>
+  <span class="divider"></span>
+  </li>
+  
+  
+   <li>
+    
+    
+    
+    
+    
+    <a href="/iot/tutorials/">Tutorials</a>
+  <span class="divider"></span>
+  </li>
+  
+  <li class="active">Lesson 3: Multi-digit 7-segment LEDs</li>
+  
+</ul>
+
+<div class="post">
+
+<header class="post-header">
+    <h1 class="post-title">Lesson 3: Multi-digit 7-segment LEDs</h1>
+    <p class="post-meta">May 13, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p>Multi-digit 7-segment displays typically have two or more digits, each of which consists of a 7-segment display by itself. The common lines of each individual digit are used to select the digit to be lit. The driver program uses a technique called “multiplexing”, i.e. lighting one digit at a time very rapidly to display all the digits.</p>
+
+<h2 id="typical-pin-out">Typical Pin Out</h2>
+<p>The figure below shows the typical pin-out (i.e. the layout of pins) on a typical 4-digit display. Notice the pins labeled “DIG1” through “DIG4” that are used to activate each digit. Also notice that there is no common LOW (for a common cathode display) or a common HIGH (for a common anode display), unlike that of a single-digit display.</p>
+
+<p><img src="/images/iot/tutorials/lesson_03/pinout.png" alt="Pinout of 4-digit 7-segment display" /></p>
+
+<h2 id="schematic">Schematic</h2>
+<p>The schematic (also called “circuit schematic” or “circuit diagram”) shows how a typical 4-digit display is hooked up to an Arduino. Please note that in schematics, the way the pins are represented does NOT necessarily match the pinout of the device.</p>
+
+<h2 id="circuit-schematic">Circuit Schematic</h2>
+<p><img src="/images/iot/tutorials/lesson_03/4-digit-7-segment-schematic.png" alt="Circuit Schematic" /></p>
+
+<h1 id="the-code">The Code</h1>
+
+<p>Code can be downloaded from <a href="https://github.com/HerdNerds/arduino/blob/master/Lessons/Lesson_03/four-digit.ino">GitHub</a></p>
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="c1">// the start of the pins used for A-G - must be sequential</span>
+<span class="lineno"> 2</span> <span class="kt">int</span> <span class="n">segmentStart</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> <span class="c1">// the start of the common pins - must be sequential</span>
+<span class="lineno"> 5</span> <span class="kt">int</span> <span class="n">digitStart</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="c1">// this code can use either polarity of display.</span>
+<span class="lineno"> 8</span> <span class="c1">// true if common is high when ON, otherwise false.</span>
+<span class="lineno"> 9</span> <span class="n">boolean</span> <span class="n">commonAnode</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="c1">// the number of digits your display has.</span>
+<span class="lineno">12</span> <span class="kt">int</span> <span class="n">numDigits</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span> <span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">15</span>   <span class="c1">// Enable all A-G and DP and outputs, </span>
+<span class="lineno">16</span>   <span class="c1">// set them to OFF </span>
+<span class="lineno">17</span>   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">18</span>     <span class="n">pinMode</span><span class="p">(</span><span class="n">segmentStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="lineno">19</span>     <span class="n">digitalWrite</span><span class="p">(</span><span class="n">segmentStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">commonAnode</span><span class="o">?</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">);</span>
+<span class="lineno">20</span>   <span class="p">}</span>
+<span class="lineno">21</span>   
+<span class="lineno">22</span>   <span class="c1">// Setup all the common pins, initially OFF.</span>
+<span class="lineno">23</span>   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numDigits</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">24</span>     <span class="n">pinMode</span><span class="p">(</span><span class="n">digitStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="lineno">25</span>     <span class="n">digitalWrite</span><span class="p">(</span><span class="n">digitStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">commonAnode</span><span class="o">?</span><span class="mi">0</span><span class="o">:</span><span class="mi">1</span><span class="p">);</span>
+<span class="lineno">26</span>   <span class="p">}</span>
+<span class="lineno">27</span> <span class="p">}</span>
+<span class="lineno">28</span> 
+<span class="lineno">29</span> <span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">30</span>   <span class="c1">// display a number on the 4-digit display.</span>
+<span class="lineno">31</span>   <span class="kt">int</span> <span class="n">amount</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
+<span class="lineno">32</span>   
+<span class="lineno">33</span>   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="p">(</span><span class="n">numDigits</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">34</span>     <span class="c1">// find the current digit, which is in the low 4 bits</span>
+<span class="lineno">35</span>     <span class="kt">int</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno">36</span>     
+<span class="lineno">37</span>     <span class="n">writeDigitToDisplay</span><span class="p">(</span><span class="n">digit</span><span class="p">);</span>
+<span class="lineno">38</span>     
+<span class="lineno">39</span>     <span class="c1">// enable the right digit for display</span>
+<span class="lineno">40</span>     <span class="n">digitalWrite</span><span class="p">(</span><span class="n">digitStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">commonAnode</span><span class="o">?</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">);</span>
+<span class="lineno">41</span>     
+<span class="lineno">42</span>     <span class="c1">// short delay between changes.</span>
+<span class="lineno">43</span>     <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="lineno">44</span>     <span class="c1">// Turn of the digit</span>
+<span class="lineno">45</span>     <span class="n">digitalWrite</span><span class="p">(</span><span class="n">digitStart</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">commonAnode</span><span class="o">?</span><span class="mi">0</span><span class="o">:</span><span class="mi">1</span><span class="p">);</span>
+<span class="lineno">46</span>     
+<span class="lineno">47</span>     <span class="c1">// get the next digit.</span>
+<span class="lineno">48</span>     <span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno">49</span>     
+<span class="lineno">50</span>     <span class="c1">//rinse, and repeat</span>
+<span class="lineno">51</span>   <span class="p">}</span>
+<span class="lineno">52</span> <span class="p">}</span>
+<span class="lineno">53</span> 
+<span class="lineno">54</span> <span class="c1">// Now we define the bits that are on and off</span>
+<span class="lineno">55</span> <span class="c1">// for each segment, These are used in the</span>
+<span class="lineno">56</span> <span class="c1">// function below to turn the correct segments on.</span>
+<span class="lineno">57</span> <span class="kt">int</span> <span class="n">dig</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="lineno">58</span> <span class="c1">// bits     6543210</span>
+<span class="lineno">59</span> <span class="c1">// digits   abcdefg</span>
+<span class="lineno">60</span>           <span class="mi">0</span><span class="n">b1111110</span><span class="p">,</span><span class="c1">//0</span>
+<span class="lineno">61</span>           <span class="mi">0</span><span class="n">b0110000</span><span class="p">,</span><span class="c1">//1</span>
+<span class="lineno">62</span>           <span class="mi">0</span><span class="n">b1101101</span><span class="p">,</span><span class="c1">//2</span>
+<span class="lineno">63</span>           <span class="mi">0</span><span class="n">b1111001</span><span class="p">,</span><span class="c1">//3</span>
+<span class="lineno">64</span>           <span class="mi">0</span><span class="n">b0110011</span><span class="p">,</span><span class="c1">//4</span>
+<span class="lineno">65</span>           <span class="mi">0</span><span class="n">b1011011</span><span class="p">,</span><span class="c1">//5</span>
+<span class="lineno">66</span>           <span class="mi">0</span><span class="n">b1011111</span><span class="p">,</span><span class="c1">//6</span>
+<span class="lineno">67</span>           <span class="mi">0</span><span class="n">b1110000</span><span class="p">,</span><span class="c1">//7</span>
+<span class="lineno">68</span>           <span class="mi">0</span><span class="n">b1111111</span><span class="p">,</span><span class="c1">//8</span>
+<span class="lineno">69</span>           <span class="mi">0</span><span class="n">b1111011</span><span class="p">,</span><span class="c1">//9</span>
+<span class="lineno">70</span>           <span class="mi">0</span><span class="n">b1110111</span><span class="p">,</span><span class="c1">//a</span>
+<span class="lineno">71</span>           <span class="mi">0</span><span class="n">b0011111</span><span class="p">,</span><span class="c1">//b</span>
+<span class="lineno">72</span>           <span class="mi">0</span><span class="n">b1001110</span><span class="p">,</span><span class="c1">//c</span>
+<span class="lineno">73</span>           <span class="mi">0</span><span class="n">b0111101</span><span class="p">,</span><span class="c1">//d</span>
+<span class="lineno">74</span>           <span class="mi">0</span><span class="n">b1001111</span><span class="p">,</span><span class="c1">//e</span>
+<span class="lineno">75</span>           <span class="mi">0</span><span class="n">b1000111</span> <span class="c1">//f</span>
+<span class="lineno">76</span> <span class="p">};</span>
+<span class="lineno">77</span> 
+<span class="lineno">78</span> <span class="kt">void</span> <span class="nf">writeDigitToDisplay</span><span class="p">(</span><span class="kt">int</span> <span class="n">digit</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">79</span>   <span class="n">digit</span> <span class="o">=</span> <span class="p">(</span><span class="n">digit</span> <span class="o">&amp;</span> <span class="mh">0x0f</span><span class="p">);</span>
+<span class="lineno">80</span>   <span class="c1">// iterate through each bit</span>
+<span class="lineno">81</span>   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">7</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">82</span>     <span class="c1">// isolate the current bit in the loop.</span>
+<span class="lineno">83</span>     <span class="kt">int</span> <span class="n">currentBit</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="n">i</span><span class="p">));</span>
+<span class="lineno">84</span> 
+<span class="lineno">85</span>     <span class="c1">// check if the bit is on, and invert for</span>
+<span class="lineno">86</span>     <span class="c1">// commonhigh if needed.</span>
+<span class="lineno">87</span>     <span class="kt">int</span> <span class="n">bitOn</span> <span class="o">=</span> <span class="p">(</span><span class="n">currentBit</span><span class="o">&amp;</span><span class="n">dig</span><span class="p">[</span><span class="n">digit</span><span class="p">])</span><span class="o">!=</span><span class="mi">0</span><span class="p">;</span>
+<span class="lineno">88</span>     <span class="k">if</span><span class="p">(</span><span class="n">commonAnode</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">89</span>       <span class="n">bitOn</span> <span class="o">=</span> <span class="o">!</span><span class="n">bitOn</span><span class="p">;</span>
+<span class="lineno">90</span>     <span class="p">}</span>
+<span class="lineno">91</span>     
+<span class="lineno">92</span>     <span class="c1">// and lastly set the bit</span>
+<span class="lineno">93</span>     <span class="n">digitalWrite</span><span class="p">(</span><span class="n">segmentStart</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">bitOn</span><span class="p">);</span>
+<span class="lineno">94</span>   <span class="p">}</span>
+<span class="lineno">95</span> <span class="p">}</span></code></pre></div>
+
+
+  </article>
+
+</div>
+
+        <!-- Footer -->
+        
+      <footer>
+
+  <div class="row">
+    
+    <div class="col-lg-6">
+      Copyright &copy; PFactor.io 2015
+    </div>
+    <div class="col-lg-6">
+      <span class="pull-right">
+      
+      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpfactor.io%2Fiot%2Ftutorials%2Flesson_03%2F&display=popup">
+          <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      
+      
+        <a href="http://twitter.com/pfactorio/">
+          <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a> 
+      
+      
+        <a href="http://github.com/pfactorio/">
+          <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+         
+      </span>
+    </div>
+  </div>  
+  
+  
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'pfactorio';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>  
+  
+</footer>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+      
+    <!-- Open external links in new tab -->
+    <script>
+      $('a[href^=http]').click(function () {
+      var a = new RegExp('/' + window.location.host + '/');
+      if (!a.test(this.href)) {
+        window.open(this.href);
+        return false;
+       }
+      });
+    </script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+  </body>
+</html>
