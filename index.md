@@ -1,6 +1,7 @@
 ---
 layout: default
 carousel: true
+comments: false
 ---
 
 ##What is PFactor?##
