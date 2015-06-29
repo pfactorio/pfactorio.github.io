@@ -31,8 +31,7 @@ comments: false
 		{% if post.date %}
 		<p><i class="fa fa-clock-o"></i> Posted {{ post.date | date: "%-d %b %Y at %R %Z" }}</p>
 		{% endif %}
-		<hr></hr>
-		<p>{{ post.content | strip_html | truncate: 240 }}</p>
+		<p>{{ post.content | strip_html | truncatewords: 50 }}</p>
 		<a class="btn btn-link" href="{{ post.url }}">Read more...</a>
 		{% endif %}
 		{% endfor %}

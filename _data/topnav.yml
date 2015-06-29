@@ -4,9 +4,9 @@
 - title:        "Aviation"
   url:          /aviation/
   
-- title:        "IoT"
+- title:        "Electronics"
   dropdown:
     - title:    "Home"
-      url:      "/iot/"
+      url:      "/electronics/"
     - title:    "Tutorials"
-      url:      "/iot/tutorials/"
+      url:      "/electronics/tutorials/"

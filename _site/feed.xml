@@ -6,8 +6,8 @@
 </description>
     <link>http://pfactor.io///</link>
     <atom:link href="http://pfactor.io///feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 May 2015 19:08:45 -0700</pubDate>
-    <lastBuildDate>Tue, 26 May 2015 19:08:45 -0700</lastBuildDate>
+    <pubDate>Mon, 29 Jun 2015 12:09:29 +0530</pubDate>
+    <lastBuildDate>Mon, 29 Jun 2015 12:09:29 +0530</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -127,12 +127,12 @@
 &lt;p&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif&quot; alt=&quot;Stepper motor representation&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 20 May 2015 08:50:00 -0700</pubDate>
-        <link>http://pfactor.io///iot/tutorials/lesson_04/</link>
-        <guid isPermaLink="true">http://pfactor.io///iot/tutorials/lesson_04/</guid>
+        <pubDate>Wed, 20 May 2015 21:20:00 +0530</pubDate>
+        <link>http://pfactor.io///electronics/tutorials/lesson_04/</link>
+        <guid isPermaLink="true">http://pfactor.io///electronics/tutorials/lesson_04/</guid>
         
         
-        <category>iot</category>
+        <category>electronics</category>
         
         <category>tutorials</category>
         
@@ -155,7 +155,7 @@
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 16 May 2015 00:39:55 -0700</pubDate>
+        <pubDate>Sat, 16 May 2015 13:09:55 +0530</pubDate>
         <link>http://pfactor.io///jekyll/update/welcome-to-jekyll/</link>
         <guid isPermaLink="true">http://pfactor.io///jekyll/update/welcome-to-jekyll/</guid>
         
@@ -282,12 +282,12 @@
 &lt;span class=&quot;lineno&quot;&gt;95&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Wed, 13 May 2015 19:10:00 -0700</pubDate>
-        <link>http://pfactor.io///iot/tutorials/lesson_03/</link>
-        <guid isPermaLink="true">http://pfactor.io///iot/tutorials/lesson_03/</guid>
+        <pubDate>Thu, 14 May 2015 07:40:00 +0530</pubDate>
+        <link>http://pfactor.io///electronics/tutorials/lesson_03/</link>
+        <guid isPermaLink="true">http://pfactor.io///electronics/tutorials/lesson_03/</guid>
         
         
-        <category>iot</category>
+        <category>electronics</category>
         
         <category>tutorials</category>
         
@@ -297,12 +297,12 @@
         <title>Lesson 2: 7-Segment LEDs</title>
         <description>
 </description>
-        <pubDate>Wed, 13 May 2015 19:07:00 -0700</pubDate>
-        <link>http://pfactor.io///iot/tutorials/lesson_02/</link>
-        <guid isPermaLink="true">http://pfactor.io///iot/tutorials/lesson_02/</guid>
+        <pubDate>Thu, 14 May 2015 07:37:00 +0530</pubDate>
+        <link>http://pfactor.io///electronics/tutorials/lesson_02/</link>
+        <guid isPermaLink="true">http://pfactor.io///electronics/tutorials/lesson_02/</guid>
         
         
-        <category>iot</category>
+        <category>electronics</category>
         
         <category>tutorials</category>
         
@@ -312,12 +312,12 @@
         <title>Lesson 1: An introduction to Electronics</title>
         <description>
 </description>
-        <pubDate>Wed, 13 May 2015 19:05:00 -0700</pubDate>
-        <link>http://pfactor.io///iot/tutorials/lesson_01/</link>
-        <guid isPermaLink="true">http://pfactor.io///iot/tutorials/lesson_01/</guid>
+        <pubDate>Thu, 14 May 2015 07:35:00 +0530</pubDate>
+        <link>http://pfactor.io///electronics/tutorials/lesson_01/</link>
+        <guid isPermaLink="true">http://pfactor.io///electronics/tutorials/lesson_01/</guid>
         
         
-        <category>iot</category>
+        <category>electronics</category>
         
         <category>tutorials</category>
         
@@ -333,7 +333,7 @@
 
 &lt;p&gt;O my friend – but&lt;/p&gt;
 </description>
-        <pubDate>Thu, 30 Apr 2015 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 30 Apr 2015 00:00:00 +0530</pubDate>
         <link>http://pfactor.io///aviation/general/My-Third-Aviation-Post/</link>
         <guid isPermaLink="true">http://pfactor.io///aviation/general/My-Third-Aviation-Post/</guid>
         
@@ -352,7 +352,7 @@
 
 &lt;p&gt;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere&lt;/p&gt;
 </description>
-        <pubDate>Sun, 01 Feb 2015 13:00:00 -0800</pubDate>
+        <pubDate>Mon, 02 Feb 2015 02:30:00 +0530</pubDate>
         <link>http://pfactor.io///aviation/tutorials/My-Second-Aviation-Post/</link>
         <guid isPermaLink="true">http://pfactor.io///aviation/tutorials/My-Second-Aviation-Post/</guid>
         
@@ -367,7 +367,7 @@
         <title>My First Aviation Post</title>
         <description>&lt;p&gt;Aviation Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then&lt;/p&gt;
 </description>
-        <pubDate>Fri, 30 Jan 2015 09:00:00 -0800</pubDate>
+        <pubDate>Fri, 30 Jan 2015 22:30:00 +0530</pubDate>
         <link>http://pfactor.io///aviation/tutorials/My-First-Aviation-Post/</link>
         <guid isPermaLink="true">http://pfactor.io///aviation/tutorials/My-First-Aviation-Post/</guid>
         
