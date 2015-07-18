@@ -9,12 +9,12 @@
 " />
     <meta name="author" content="" />
 
-  <title>Lesson 4: Driving Miss Daisy!</title>
+  <title>Motors and Motor Drives</title>
   
   <!-- Open Graph Meta Tags -->
   
-  <meta property="og:url" content="http://pfactor.io/electronics/tutorials/lesson_04/" />
-  <meta property="og:title" content="Lesson 4: Driving Miss Daisy!" />
+  <meta property="og:url" content="http://pfactor.io/electronics/tutorials/04_motors/" />
+  <meta property="og:title" content="Motors and Motor Drives" />
   <meta property="og:description" content="Motors, and motor drives are, perhaps, the most fun aspects of electronics. The very thought of converting electrical pulses into mechanical energy is amazin..." />
   <meta property="og:site_name" content="PFactor" />
   <meta property="og:type" content="article" />
@@ -38,7 +38,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" /></script>
     <![endif]-->
 
-  <link rel="canonical" href="http://pfactor.io/electronics/tutorials/lesson_04/" />
+  <link rel="canonical" href="http://pfactor.io/electronics/tutorials/04_motors/" />
   <link rel="alternate" type="application/rss+xml" title="PFactor.io" href="http://pfactor.io///feed.xml" />
   <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
@@ -76,12 +76,6 @@
                     
                     <li>
                         <a href="/about/">About</a>
-                    </li>
-                     
-                    
-                    
-                    <li>
-                        <a href="/aviation/">Aviation</a>
                     </li>
                      
                     
@@ -162,14 +156,14 @@
   <span class="divider"></span>
   </li>
   
-  <li class="active">Lesson 4: Driving Miss Daisy!</li>
+  <li class="active">Motors and Motor Drives</li>
   
 </ul>
 
 <div class="post">
 
 <header class="post-header">
-    <h1 class="post-title">Lesson 4: Driving Miss Daisy!</h1>
+    <h1 class="post-title">Motors and Motor Drives</h1>
     <p class="post-meta">May 20, 2015</p>
   </header>
 
@@ -282,11 +276,28 @@
 <p>Many switching circuits such as the popular L293D H-bridge IC already include a flyback diode in the output circuit. Remember to always check the datasheet for the driver that you are using to determine whether a flyback diode is inbuilt or not.</p>
 
 <h2 id="stepper-motors">Stepper Motors</h2>
-<p>A stepper motor moves its rotor in incremental “steps” around its axis based on an input that consists of a series of pulses. Each pulse results in an increment of one step around the axis of the motor.</p>
+<p>A stepper motor moves its rotor in incremental “steps” around its axis based on an input that consists of a series of pulses. Each pulse results in an increment of one step around the axis of the motor, with a finite number of integer steps rotating the motor through one full rotation.</p>
 
 <p>The figure below (from Wikimedia Commons) shows an animation of how a typically stepper motor functions.</p>
 
 <p><img src="http://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif" alt="Stepper motor representation" /></p>
+
+<p>Most common (hobby) stepper motors are made up of a notched (or gear-shaped) permanent magnet rotor which is surrounded by a set of electromagnets on the stator.</p>
+
+<p>When one coil of the stator is energized, the rotor moves so that one of the notches is aligned with the electromagnet. The rotor is designed in such a way that this results in another notch being out of alignment with the next electromagnet in the sequence. Thus, when the next electromagnet is energized, the rotor moves to align itself with that electromagent. Continuing this sequence results in the rotor rotating through a series of small steps.</p>
+
+<p>In order for this to work correctly, it is necessary for the electromagnets to change their magnetic polarity depending on the polarity of the rotor notch that they seek to attract. Polarity reversal requires that the direction of current flow be reversible. This is achieved either through motor winding design, or through external circuits that reverse the direction of current flow through the windings.</p>
+
+<p>There are, therefore, two types of stepper motors:
+* Unipolar
+* Bipolar</p>
+
+<h3 id="unipolar-stepper-motors">Unipolar Stepper Motors</h3>
+<p>Unipolar stepper motors are, perhaps, the easiest to use. They consist of a set of coils, each with a center tap. By changing the voltage that is applied to each end of the coil, relative to the center tap, the polarity of the coil can be easily reversed. This means that the triggering circuit can be very simple since it does not need to reverse the direction of current flow.</p>
+
+<p>The figure below (from Wikimedia Commons) shows a representation of a typical unipolar stepper motor.</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Unipolar-stepper-motor-windings.png" alt="Unipolar Stepper Motor" /></p>
 
 
   </article>
@@ -305,7 +316,7 @@
     <div class="col-lg-6">
       <span class="pull-right">
       
-      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpfactor.io%2Felectronics%2Ftutorials%2Flesson_04%2F&display=popup">
+      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpfactor.io%2Felectronics%2Ftutorials%2F04_motors%2F&display=popup">
           <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>

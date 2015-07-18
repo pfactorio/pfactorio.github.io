@@ -6,12 +6,12 @@
 </description>
     <link>http://pfactor.io///</link>
     <atom:link href="http://pfactor.io///feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Jun 2015 12:09:29 +0530</pubDate>
-    <lastBuildDate>Mon, 29 Jun 2015 12:09:29 +0530</lastBuildDate>
+    <pubDate>Sat, 18 Jul 2015 15:38:45 +0530</pubDate>
+    <lastBuildDate>Sat, 18 Jul 2015 15:38:45 +0530</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Lesson 4: Driving Miss Daisy!</title>
+        <title>Motors and Motor Drives</title>
         <description>&lt;p&gt;Motors, and motor drives are, perhaps, the most fun aspects of electronics. The very thought of converting electrical pulses into mechanical energy is amazing to the human mind. Motors power a wide variety of physical objects in our world - from cell phone buzzers to robots to electric cars.&lt;/p&gt;
 
 &lt;h2 id=&quot;lesson-outline&quot;&gt;Lesson Outline&lt;/h2&gt;
@@ -120,16 +120,33 @@
 &lt;p&gt;Many switching circuits such as the popular L293D H-bridge IC already include a flyback diode in the output circuit. Remember to always check the datasheet for the driver that you are using to determine whether a flyback diode is inbuilt or not.&lt;/p&gt;
 
 &lt;h2 id=&quot;stepper-motors&quot;&gt;Stepper Motors&lt;/h2&gt;
-&lt;p&gt;A stepper motor moves its rotor in incremental “steps” around its axis based on an input that consists of a series of pulses. Each pulse results in an increment of one step around the axis of the motor.&lt;/p&gt;
+&lt;p&gt;A stepper motor moves its rotor in incremental “steps” around its axis based on an input that consists of a series of pulses. Each pulse results in an increment of one step around the axis of the motor, with a finite number of integer steps rotating the motor through one full rotation.&lt;/p&gt;
 
 &lt;p&gt;The figure below (from Wikimedia Commons) shows an animation of how a typically stepper motor functions.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif&quot; alt=&quot;Stepper motor representation&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Most common (hobby) stepper motors are made up of a notched (or gear-shaped) permanent magnet rotor which is surrounded by a set of electromagnets on the stator.&lt;/p&gt;
+
+&lt;p&gt;When one coil of the stator is energized, the rotor moves so that one of the notches is aligned with the electromagnet. The rotor is designed in such a way that this results in another notch being out of alignment with the next electromagnet in the sequence. Thus, when the next electromagnet is energized, the rotor moves to align itself with that electromagent. Continuing this sequence results in the rotor rotating through a series of small steps.&lt;/p&gt;
+
+&lt;p&gt;In order for this to work correctly, it is necessary for the electromagnets to change their magnetic polarity depending on the polarity of the rotor notch that they seek to attract. Polarity reversal requires that the direction of current flow be reversible. This is achieved either through motor winding design, or through external circuits that reverse the direction of current flow through the windings.&lt;/p&gt;
+
+&lt;p&gt;There are, therefore, two types of stepper motors:
+* Unipolar
+* Bipolar&lt;/p&gt;
+
+&lt;h3 id=&quot;unipolar-stepper-motors&quot;&gt;Unipolar Stepper Motors&lt;/h3&gt;
+&lt;p&gt;Unipolar stepper motors are, perhaps, the easiest to use. They consist of a set of coils, each with a center tap. By changing the voltage that is applied to each end of the coil, relative to the center tap, the polarity of the coil can be easily reversed. This means that the triggering circuit can be very simple since it does not need to reverse the direction of current flow.&lt;/p&gt;
+
+&lt;p&gt;The figure below (from Wikimedia Commons) shows a representation of a typical unipolar stepper motor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/7/77/Unipolar-stepper-motor-windings.png&quot; alt=&quot;Unipolar Stepper Motor&quot; /&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Wed, 20 May 2015 21:20:00 +0530</pubDate>
-        <link>http://pfactor.io///electronics/tutorials/lesson_04/</link>
-        <guid isPermaLink="true">http://pfactor.io///electronics/tutorials/lesson_04/</guid>
+        <link>http://pfactor.io///electronics/tutorials/04_motors/</link>
+        <guid isPermaLink="true">http://pfactor.io///electronics/tutorials/04_motors/</guid>
         
         
         <category>electronics</category>

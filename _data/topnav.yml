@@ -1,9 +1,6 @@
 - title:        "About"
   url:          /about/
   
-- title:        "Aviation"
-  url:          /aviation/
-  
 - title:        "Electronics"
   dropdown:
     - title:    "Home"
