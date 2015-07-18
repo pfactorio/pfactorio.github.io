@@ -1,6 +1,7 @@
 ---
 layout: default
 carousel: true
+panels: true
 comments: false
 ---
 

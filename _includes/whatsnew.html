@@ -1,0 +1,14 @@
+{% for post in site.posts limit:3 %}
+	<p>
+	<a href="{{ post.url }}">{{ post.title }}</a>
+	{% if post.updated %}
+		<span class="label label-info">Updated</span>
+	{% endif %}
+	<br />
+	{% if post.abstract %}
+	{{ post.abstract | strip_html | truncatewords: 30 }}
+	{% else %}
+	{{ post.content | strip_html | truncatewords: 30 }}
+	{% endif %}
+	</p>
+{% endfor %}
