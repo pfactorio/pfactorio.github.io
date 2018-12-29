@@ -14,7 +14,9 @@ $gray:                   #777 !default; // #555
 $gray-light:             #AEA79F !default;   // #999
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #DD4814 !default;
+//$brand-primary:         #DD4814 !default;
+//$brand-primary:         #7B241C !default;
+$brand-primary:         #641E16 !default;
 $brand-success:         #38B44A !default;
 $brand-info:            #772953 !default;
 $brand-warning:         #EFB73E !default;
@@ -42,20 +44,31 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Cabin", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  Spectral, Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          16px !default;
+$font-family-headings:  Montserrat, Helvetica, Arial, sans-serif !default;
+
+$font-size-base:          21px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
-$font-weight-base:		  500 !default;
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-x-small:       ceil(($font-size-base * 0.65)) !default;
+
+$font-weight-base:		  normal !default;
+// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-h5:            $font-size-base !default;
+// $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.0)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 1.7)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.2)) !default; // ~24px
+$font-size-h4:            $font-size-base !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -65,12 +78,16 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $font-family-base !default;
+$headings-font-family:    $font-family-headings !default;
 $headings-font-weight:    700 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
-
+$navbar-font-family:    Roboto, Helvetica, Arial, sans-serif !default;
+$navbar-font-weight:    600 !default;
+$navbar-brand-font-size:      $font-size-large !default;
+$navbar-menu-font-size:     $font-size-small !default;
+$navbar-menu-font-weight:   normal !default;
 //== Iconography
 //
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.

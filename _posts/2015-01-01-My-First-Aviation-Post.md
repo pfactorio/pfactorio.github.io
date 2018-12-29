@@ -1,6 +1,5 @@
 ---
 layout: post
-author: PFactor.io
 categories: aviation tutorials
 date: 2015-01-30 09:00 -08:00
 ---

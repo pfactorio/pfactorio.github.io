@@ -13,9 +13,9 @@
   
   <!-- Open Graph Meta Tags -->
   
-  <meta property="og:url" content="http://pfactor.io/electronics/tutorials/04_motors/" />
+  <meta property="og:url" content="http://localhost:4000electronics/04_motors/" />
   <meta property="og:title" content="Motors and Motor Drives" />
-  <meta property="og:description" content="Motors, and motor drives are, perhaps, the most fun aspects of electronics. The very thought of converting electrical pulses into mechanical energy is amazin..." />
+  <meta property="og:description" content="<p>Motors, and motor drives are, perhaps, the most fun aspects of electronics. The very thought of converting electrical pulses into mechanical energy is ama..." />
   <meta property="og:site_name" content="PFactor" />
   <meta property="og:type" content="article" />
   <!-- End Open Graph Meta Tags -->
@@ -38,8 +38,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" /></script>
     <![endif]-->
 
-  <link rel="canonical" href="http://pfactor.io/electronics/tutorials/04_motors/" />
-  <link rel="alternate" type="application/rss+xml" title="PFactor.io" href="http://pfactor.io///feed.xml" />
+  <link rel="canonical" href="http://localhost:4000electronics/04_motors/" />
+  <link rel="alternate" type="application/rss+xml" title="PFactor.io" href="http://localhost:4000//feed.xml" />
+
+  <!-- favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -96,6 +99,12 @@
                     </li> <!-- /.dropdown -->
                      
                     
+                    
+                    <li>
+                        <a href="/aviation/">Aviation</a>
+                    </li>
+                     
+                    
                 
                   <li>
                   <a href="https://facebook.com/pages/pfactorio/1427400607569811"><i class="fa fa fa-facebook-square fa-lg"></i></a>
@@ -140,24 +149,11 @@
   
    <li>
     
-    
-    
     <a href="/electronics/">Electronics</a>
   <span class="divider"></span>
   </li>
   
-  
-   <li>
-    
-    
-    
-    
-    
-    <a href="/electronics/tutorials/">Tutorials</a>
-  <span class="divider"></span>
-  </li>
-  
-  <li class="active">Motors and Motor Drives</li>
+  <!-- <li class="active">Motors and Motor Drives</li> -->
   
 </ul>
 
@@ -206,7 +202,7 @@
 
 <p><img src="http://arduino.cc/en/uploads/Tutorial/pwm.gif" alt="Pulse Width Modulation" /></p>
 
-<p>The figure shows a typical set of PWM waveforms with varying duty cycles. Note that the frequency of the waveforms is the same in every row of the illustration. However, the length of time (and, hence, the width) that the pulse stays on varies depending on the argument to the <code>analogWrite</code> function. With a 50% duty cycle (<code>analogWrite(127)</code>) the pulse stays on for half the time period of the wave. Due to the inherent inertia of the electrical system that is being controlled (e.g. a motor) the system perceives the voltage of a 50% PWM signal to be half of the supply voltage.</p>
+<p>The figure shows a typical set of PWM waveforms with varying duty cycles. Note that the frequency of the waveforms is the same in every row of the illustration. However, the length of time (and, hence, the width) that the pulse stays on varies depending on the argument to the <code class="highlighter-rouge">analogWrite</code> function. With a 50% duty cycle (<code class="highlighter-rouge">analogWrite(127)</code>) the pulse stays on for half the time period of the wave. Due to the inherent inertia of the electrical system that is being controlled (e.g. a motor) the system perceives the voltage of a 50% PWM signal to be half of the supply voltage.</p>
 
 <p>For PWM to work, the switching frequency must be significantly higher than that <em>perceived</em> by the load. Typical switching frequencies for DC motors are in the one to ten kilohertz range. Unfortunately, the PWM output on the Arduino Uno runs at either 490 Hz or 980 Hz (pins 5 and 6 only), but it seems to suffice for most hobby projects. Note that this is not so much a limitation of the ATMega hardware, as it is a limitation of the Arduino firmware.</p>
 
@@ -289,9 +285,11 @@
 
 <p>In order for this to work correctly, it is necessary for the electromagnets to change their magnetic polarity depending on the polarity of the rotor notch that they seek to attract. Polarity reversal requires that the direction of current flow be reversible. This is achieved either through motor winding design, or through external circuits that reverse the direction of current flow through the windings.</p>
 
-<p>There are, therefore, two types of stepper motors:
-* Unipolar
-* Bipolar</p>
+<p>There are, therefore, two types of stepper motors:</p>
+<ul>
+  <li>Unipolar</li>
+  <li>Bipolar</li>
+</ul>
 
 <h3 id="unipolar-stepper-motors">Unipolar Stepper Motors</h3>
 <p>Unipolar stepper motors are, perhaps, the easiest to use. They consist of a set of coils, each with a center tap. By changing the voltage that is applied to each end of the coil, relative to the center tap, the polarity of the coil can be easily reversed. This means that the triggering circuit can be very simple since it does not need to reverse the direction of current flow.</p>
@@ -318,7 +316,7 @@
     <div class="col-lg-6">
       <span class="pull-right">
       
-      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpfactor.io%2Felectronics%2Ftutorials%2F04_motors%2F&display=popup">
+      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000electronics%2F04_motors%2F&display=popup">
           <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>

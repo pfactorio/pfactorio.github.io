@@ -13,7 +13,7 @@
   
   <!-- Open Graph Meta Tags -->
   
-  <meta property="og:url" content="http://pfactor.io/index.html" />
+  <meta property="og:url" content="http://localhost:4000" />
   <meta property="og:title" content="PFactor.io" />
   <meta property="og:description" content="##What is PFactor?##
 PFactor.io is a free website that focuses on electronics and robotics. Our aim is to provide you with interesting tutorials, articles, a..." />
@@ -39,8 +39,11 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" /></script>
     <![endif]-->
 
-  <link rel="canonical" href="http://pfactor.io/" />
-  <link rel="alternate" type="application/rss+xml" title="PFactor.io" href="http://pfactor.io///feed.xml" />
+  <link rel="canonical" href="http://localhost:4000" />
+  <link rel="alternate" type="application/rss+xml" title="PFactor.io" href="http://localhost:4000//feed.xml" />
+
+  <!-- favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 		tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
@@ -97,6 +100,12 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
                     </li> <!-- /.dropdown -->
                      
                     
+                    
+                    <li>
+                        <a href="/aviation/">Aviation</a>
+                    </li>
+                     
+                    
                 
                   <li>
                   <a href="https://facebook.com/pages/pfactorio/1427400607569811"><i class="fa fa fa-facebook-square fa-lg"></i></a>
@@ -132,22 +141,40 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
             
             <li data-target="#myCarousel" data-slide-to="1" ></li>
             
+            <li data-target="#myCarousel" data-slide-to="2" ></li>
+            
+            <li data-target="#myCarousel" data-slide-to="3" ></li>
+            
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
         
             <div class="item  active">
+                <div class="fill" style="background-image:url('images/slides/cessna-sunset.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Aviation, Electronics, Robotics, and more...</h2>
+                </div>
+            </div>
+        
+            <div class="item ">
                 <div class="fill" style="background-image:url('images/slides/circuit-diagram.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Electronics, Robotics, and more...</h2>
+                    <h2>Aviation, Electronics, Robotics, and more...</h2>
+                </div>
+            </div>
+        
+            <div class="item ">
+                <div class="fill" style="background-image:url('images/slides/cessna-simulator-1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Aviation, Electronics, Robotics, and more...</h2>
                 </div>
             </div>
         
             <div class="item ">
                 <div class="fill" style="background-image:url('images/slides/light-science.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Electronics, Robotics, and more...</h2>
+                    <h2>Aviation, Electronics, Robotics, and more...</h2>
                 </div>
             </div>
         
@@ -173,10 +200,10 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
             <div class="panel-heading">
               <h2 class="panel-title">New and Updated</h2>
             </div>
-            <div class="panel-body">
+            <div class="panel-body fixed">
               
 	<p>
-	<a href="/electronics/tutorials/04_motors/">Motors and Motor Drives</a>
+	<a href="/electronics/04_motors/">Motors and Motor Drives</a>
 	
 		<span class="label label-info">Updated</span>
 	
@@ -213,14 +240,10 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
             <div class="panel-heading">
               <h1 class="panel-title">What is PFactor?</h1>
             </div>
-            <div class="panel-body">
+            <div class="panel-body fixed">
               <p>
-              PFactor.io is a free website that focuses on electronics and robotics. Our aim is to provide you with interesting tutorials, articles, and resources that deal with these topics.
+              PFactor.io is a free website that focuses on aviation, and electronics. Our aim is to provide you with interesting tutorials, articles, and resources that deal with these topics.
               </p>
-              <p>
-              Our emphasis will be on microcontrollers such as the Arduino, the Raspberry Pi and on "systems-on-a-chip".
-              </p>
-              <br />
             </div>
           </div>          
         </div>
@@ -229,12 +252,12 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
             <div class="panel-heading">
               <h2 class="panel-title">Why this name?</h2>
             </div>
-            <div class="panel-body">
+            <div class="panel-body fixed">
               <p>
               In electrical engineering, the phrase "power factor" (or PFactor) is one with special connotations. It represents the ratio of real power to total power generated by an electrical system.
               </p>
               <p>
-              As a site that deals with electronics, we could not think of a better name for our site than "PFactor".
+                In aviation, p-factor refers to the left-turning tendency of the aircraft caused by asymmetric loading of the propeller at high angles of attack.
               </p>
             </div>
           </div>          
@@ -253,7 +276,7 @@ PFactor.io is a free website that focuses on electronics and robotics. Our aim i
     <div class="col-lg-6">
       <span class="pull-right">
       
-      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpfactor.io%2Findex.html&display=popup">
+      <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000&display=popup">
           <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>

@@ -10,7 +10,7 @@ comments: false
 <div class="row">
 	<div class="col-lg-12">
 	{% assign aCategories = page.url | remove_first: '/' | split: '/' %}
-	{% assign iSize = aCategories.size | minus: 2 %}
+	{% assign iSize = aCategories.size | minus: 1 %}
 	{% assign cat_last = aCategories[iSize] %}
 		<h1 class="page-header">
 			{{ cat_last | strip | capitalize }}

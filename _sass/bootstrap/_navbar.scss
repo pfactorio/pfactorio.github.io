@@ -163,7 +163,9 @@
 .navbar-brand {
   float: left;
   padding: $navbar-padding-vertical $navbar-padding-horizontal;
-  font-size: $font-size-large;
+  font-family: $navbar-font-family;
+  font-size: $navbar-brand-font-size;
+  font-weight: $navbar-font-weight;
   line-height: $line-height-computed;
   height: $navbar-height;
 
@@ -231,7 +233,9 @@
 
 .navbar-nav {
   margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
-
+  font-family: $navbar-font-family;
+  font-size: $navbar-menu-font-size;
+  font-weight: $navbar-menu-font-weight;
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
@@ -248,11 +252,17 @@
       background-color: transparent;
       border: 0;
       box-shadow: none;
+      font-family: $navbar-font-family;
+      font-size: $navbar-menu-font-size;
+      font-weight: normal;
       > li > a,
       .dropdown-header {
         padding: 5px 15px 5px 25px;
       }
       > li > a {
+        font-family: $navbar-font-family;
+        font-size: $navbar-menu-font-size;
+        font-weight: normal;
         line-height: $line-height-computed;
         &:hover,
         &:focus {
@@ -327,6 +337,9 @@
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
   @include border-top-radius(0);
+  font-family: $navbar-font-family;
+  font-size: $navbar-menu-font-size;
+  font-weight: normal;
 }
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {

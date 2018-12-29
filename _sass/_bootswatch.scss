@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Cabin:500,700,500italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Spectral|Montserrat|Roboto);
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 // Navbar =====================================================================
 
@@ -37,6 +37,13 @@
   }
 }
 
+.fixed {
+  min-height: 400px;
+  max-height: 400px;
+  overflow-y: hidden;
+}
+
+.responsive-wrap { max-width: 100%;}
 
 // Buttons ====================================================================
 

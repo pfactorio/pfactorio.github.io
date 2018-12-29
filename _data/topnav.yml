@@ -7,3 +7,6 @@
       url:      "/electronics/"
     - title:    "Tutorials"
       url:      "/electronics/tutorials/"
+
+- title:        "Aviation"
+  url:          "/aviation/"
