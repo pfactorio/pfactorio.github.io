@@ -7,7 +7,7 @@ excerpt: "In the first installment of this series we wrote a simple Java program
 ---
 
 <!--Test sentence to see if this fixes the damn link issue. Another test sentence. Another test sentence.-->
-
+  
 In the [first installment](/2014/05/11/raspberry-pi-and-pi4j-tutorial-1/) of this series we wrote a simple Java program that used the Pi4J library to set one of the RPi's GPIO ports low and reads its status. Before we go any further with our tutorials, let us take a quick look at what GPIO is, and what it offers.
 
 Pi4J provides a class `RaspiPin` to give you an abstraction of the GPIO pins on the board. We used the following snippet of code to set the pin low:
