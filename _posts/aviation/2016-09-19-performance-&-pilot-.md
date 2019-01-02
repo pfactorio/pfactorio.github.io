@@ -10,4 +10,4 @@ This is a video of my presentation to Private Pilot Study called "Performance an
 
 The video of the session can be found on YouTube:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NdSWFl6kTUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>unwantedtext</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NdSWFl6kTUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&nbsp;</iframe>
