@@ -5,6 +5,16 @@
 /*
    Pygments.rb and Rouge
    ========================================================================== */
+
+
+.highlight {
+	border: none;
+}
+
+.rouge-table {
+	border: none;
+}
+
 .linenos,
 .code {
 	padding: 0;
@@ -25,7 +35,8 @@
 .highlight {
 	overflow-x: auto;
 	font-size: 16px;
-	border: 1px solid darken($body-bg, 5);
+	// border: 1px solid darken($body-bg, 5);
+	border: 0px solid #FFFFFF;
 	border-radius: $border-radius-base;
 	pre {
 		position: relative;

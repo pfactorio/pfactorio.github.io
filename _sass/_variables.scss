@@ -44,15 +44,15 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  Spectral, Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Nunito", "Spectral", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace:   "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-family-headings:  Montserrat, Helvetica, Arial, sans-serif !default;
 
-$font-size-base:          21px !default;
+$font-size-base:          18px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 $font-size-x-small:       ceil(($font-size-base * 0.65)) !default;
