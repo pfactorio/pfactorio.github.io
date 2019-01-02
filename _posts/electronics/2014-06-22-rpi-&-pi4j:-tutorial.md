@@ -6,6 +6,7 @@ categories: electronics
 excerpt: "In the first installment of this series, we saw how we could quickly set up a Java development envi..."
 ---
 
+<!--Test sentence to see if this fixes the damn link issue. Another test sentence. Another test sentence.-->
 In the [first installment](/2014/05/11/raspberry-pi-and-pi4j-tutorial-1/ "Raspberry Pi and Pi4J: Tutorial 1") of this series, we saw how we could quickly set up a Java development environment on the RPi, and wrote a simple program to demonstrate how easy it is to configure GPIO using Pi4J.
 
 Let us now dive a little deeper into Pi4J, and understand how we can use the GPIO pins as output pins.
@@ -74,7 +75,7 @@ led1.blink(500, 10000); // blinks LED1 once a second
 
 A sample program to demonstrate the API methods mentioned in this tutorial is given below. You can download the source code from [BitBucket](https://bitbucket.org/calpilot/rpi-tutorials/overview).
 
-[java]
+{% highlight java linenos %}
 package org.calpilot;
 
 /* Required imports for Pi4J */
@@ -200,5 +201,4 @@ gpio.shutdown();
 }
 }
 }
-
-[/java]
+{% endhighlight %}
