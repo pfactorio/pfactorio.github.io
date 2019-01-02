@@ -2,11 +2,7 @@
   url:          /about/
   
 - title:        "Electronics"
-  dropdown:
-    - title:    "Home"
-      url:      "/electronics/"
-    - title:    "Tutorials"
-      url:      "/electronics/tutorials/"
+  url:      "/electronics/"
 
 - title:        "Aviation"
   url:          "/aviation/"
