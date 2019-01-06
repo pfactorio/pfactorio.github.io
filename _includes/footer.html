@@ -10,24 +10,24 @@
       {% if site.facebook_page %}
       <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u={{ page.url | remove_first: '/' | prepend: site.url | replace: ':', '%3A' | replace: '/', '%2F' | replace: ' ', '%20' }}&display=popup">
           <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
           </span>
         </a>
       {% endif %}
       {% if site.twitter_username %}
         <a href="http://twitter.com/{{ site.twitter_username }}/">
           <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
           </span>
         </a> 
       {% endif %}
       {% if site.github_username %}
         <a href="http://github.com/{{ site.github_username }}/">
           <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fab fa-github fa-stack-1x fa-inverse"></i>
           </span>
         </a>
       {% endif %}   

@@ -6,15 +6,10 @@
     <meta name="author" content="{% if site.author %}{{ site.author}}{% endif %}" />
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  
-  <!-- Open Graph Meta Tags -->
-<!--   
-  <meta property="og:url" content="{{ page.url | remove_first: '/' | prepend: site.url }}" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:description" content="{{ page.content | truncate: 160 }}" />
-  <meta property="og:site_name" content="PFactor" />
-  <meta property="og:type" content="article" /> -->
-  <!-- End Open Graph Meta Tags -->
+{% comment %}
+Jekyll SEO Plugin
+{% endcomment %}
+    {% seo %}
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet" />
@@ -23,6 +18,7 @@
     <link href="/css/modern-business.css" rel="stylesheet" />
 
     <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!--    
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 -->
@@ -40,6 +36,5 @@
   <!-- favicon -->
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   
-  {% seo %}
 
 </head>
