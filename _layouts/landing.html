@@ -29,7 +29,7 @@ comments: false
 		<p class="lead">by {{ post.author }}</p>
 		{% endif %}
 		{% if post.date %}
-		<p><i class="fa fa-clock-o"></i> Posted {{ post.date | date: "%-d %b %Y at %R %Z" }}</p>
+		<p><i class="fas fa-clock-o"></i> Posted {{ post.date | date: "%-d %b %Y at %R %Z" }}</p>
 		{% endif %}
 		<p>{{ post.content | strip_html | truncatewords: 50 }}</p>
 		<a class="btn btn-link" href="{{ post.url }}">Read more...</a>
