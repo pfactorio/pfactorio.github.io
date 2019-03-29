@@ -1,22 +1,23 @@
-    <!-- Included from default.html if "carousel" front matter is "true" -->
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            {% for slide in site.data.carousel %}
-            <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %} class="active"{% endif %}></li>
-            {% endfor %}
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+<!-- Included from default.html if "carousel" front matter is "true" -->
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
         {% for slide in site.data.carousel %}
-            <div class="item {% if forloop.first %} active{% endif %}">
-                <div class="fill" style="background-image:url('{{ slide.url }}');"></div>
-                <div class="carousel-caption">
-                    <h2>{{ slide.caption }}</h2>
-                </div>
+        <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %} class="active"
+            {% endif %}></li>
+        {% endfor %}
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        {% for slide in site.data.carousel %}
+        <div class="item {% if forloop.first %} active{% endif %}">
+            <div class="fill" style="background-image:url('{{ slide.url }}');"></div>
+            <div class="carousel-caption">
+                <h2>{{ slide.caption }}</h2>
             </div>
+        </div>
         {% endfor %}
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -25,4 +26,4 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="icon-next"></span>
         </a>
-    </header>
+</header>
